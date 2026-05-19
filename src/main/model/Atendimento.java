@@ -10,12 +10,10 @@ import java.util.List;
 
 public class Atendimento {
 
-    private Tutor tutor;
-    private Animal animal;
     private EstadoAtendimento estado;
-    private ServicoVeterinario servico;
+    private final ServicoVeterinario servico;
 
-    private List<Observador> observadores =
+    private final List<Observador> observadores =
             new ArrayList<>();
 
     public Atendimento(
@@ -24,11 +22,9 @@ public class Atendimento {
             ServicoVeterinario servico
     ) {
 
-        this.tutor = tutor;
-        this.animal = animal;
         this.servico = servico;
 
-        this.estado = new EstadoAtendimento();
+        this.estado = new Agendado();
     }
 
     public void adicionarObservador(

@@ -2,9 +2,9 @@ package model;
 
 import observer.Observador;
 
-public class Tutor extends Observador {
+public class Tutor implements Observador {
 
-    private String nome;
+    private final String nome;
 
     public Tutor(String nome) {
         this.nome = nome;
